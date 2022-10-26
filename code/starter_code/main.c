@@ -37,42 +37,14 @@ void main(void)                                                               //
 // -------------------------------------------------------------------------- //
 
 // ------------------------------ >MAIN CODE< ------------------------------- //
-#define button1 75
-#define button2 76
-
-#define led1 78
-#define led2 79
-
 void setup()
 {
-    pinMode(button1, INPUT);
-    pinMode(button2, INPUT);
-
-    pinMode(led1, OUTPUT);
-    pinMode(led2, OUTPUT);
-
     pinMode(RED_LED, OUTPUT);
-    pinMode(BLUE_LED, OUTPUT);
+    pinMode(BLUE_RED, OUTPUT);
 }
 
-void loop()
+void loop() // Toggle GPIO pins 34 and 39 (pins 80 and 81) off and on (onboard Blue and Red LEDs)
 {
-    int button1_state = digitalRead(button1);
-    int button2_state = digitalRead(button2);
-
-    printf("button 1: %d, button 2: %d\n", button1_state, button2_state);
-
-    if (button1_state)
-    {
-        togglePin(led1);
-        togglePin (BLUE_LED);
-
-    }
-
-    if (button2_state)
-    {
-        togglePin(led2);
-        togglePin (RED_LED);
-
-    }
+    togglePin (RED_LED);
+    togglePin (BLUE_LED);
 }
