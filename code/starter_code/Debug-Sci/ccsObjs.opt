@@ -1,0 +1,10 @@
+"./F28069_pins.obj"
+"./main.obj"
+"./sci_2806x.obj"
+"./tisrc/F2806x_CodeStartBranch.obj"
+"./tisrc/F2806x_DevInit.obj"
+"./tisrc/F2806x_GlobalVariableDefs.obj"
+"./tisrc/F2806x_usDelay.obj"
+"../F28069.cmd"
+"../F2806x_Headers_nonBIOS.cmd"
+-llibc.a
