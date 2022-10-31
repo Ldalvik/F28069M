@@ -40,7 +40,6 @@ interrupt void Timer2Interrupt()
 }
 
 #define BTN1 75
-#define BTN2 76
 
 #define DEBUG_WIRE 38
 
