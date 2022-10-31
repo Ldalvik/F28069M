@@ -39,7 +39,7 @@ interrupt void Timer2Interrupt()
     }
 }
 
-#define BTN1 75
+#define button 75
 
 #define DEBUG_WIRE 38
 
@@ -53,20 +53,14 @@ void setup()
     pinMode(LED2, OUTPUT);
     pinMode(LED3, OUTPUT);
 
-    pinMode(RED_LED, OUTPUT);
-    pinMode(BLUE_LED, OUTPUT);
-
-    pinMode(BTN1, INPUT);
-    pinMode(BTN2, INPUT);
-
-    pinMode(DEBUG_WIRE, INPUT);
+    pinMode(button, INPUT);
 
     InitInterrupts();
 }
 
 void loop()
 {
-    int b1 = digitalRead(BTN1);
+    int b1 = digitalRead(button);
     static int lastButtonState = 0, state = 0;
 
     if (b1 != lastButtonState)
