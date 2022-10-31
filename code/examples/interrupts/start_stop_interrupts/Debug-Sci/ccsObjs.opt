@@ -1,0 +1,12 @@
+"./main.obj"
+"./sci_2806x.obj"
+"./f28069api/api.obj"
+"./f28069api/initializers.obj"
+"./f28069api/interrupts.obj"
+"./tisrc/F2806x_CodeStartBranch.obj"
+"./tisrc/F2806x_DevInit.obj"
+"./tisrc/F2806x_GlobalVariableDefs.obj"
+"./tisrc/F2806x_usDelay.obj"
+"../F28069.cmd"
+"../F2806x_Headers_nonBIOS.cmd"
+-llibc.a
