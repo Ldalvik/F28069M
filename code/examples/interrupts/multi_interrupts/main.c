@@ -10,9 +10,9 @@
 #define LED_BLINK_PERIOD (500 * TICKS_PER_MS)
 #define NEVER_16 0xFFFF
 
-volatile uint16_t Timer0 = 0, Timer1 = 0, Timer2 = 0;
+volatile long Timer0 = 0, Timer1 = 0, Timer2 = 0;
 
-static interrupt void Timer0Interrupt()
+interrupt void Timer0Interrupt()
 {
     clearInterrupt(0);
     if(Timer0 < (NEVER_16-1))
@@ -21,7 +21,7 @@ static interrupt void Timer0Interrupt()
     }
 }
 
-static interrupt void Timer1Interrupt()
+interrupt void Timer1Interrupt()
 {
     clearInterrupt(1);
     if(Timer1 < (NEVER_16-1))
@@ -30,7 +30,7 @@ static interrupt void Timer1Interrupt()
     }
 }
 
-static interrupt void Timer2Interrupt()
+interrupt void Timer2Interrupt()
 {
     clearInterrupt(2);
     if(Timer2 < (NEVER_16-1))
@@ -90,7 +90,6 @@ void loop()
         }
         lastButtonState = b1;
     }
-    
     if (Timer0 > LED_BLINK_PERIOD)
     {
         Timer0 = 0;
